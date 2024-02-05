@@ -62,10 +62,6 @@ services:
     volumes:
       - ./n8n_data:/home/node/.n8n
 
-volumes:
-  traefik_data:
-  n8n_data:
-
 # ################################## #
 # .env Contents
 # ################################## #
