@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3"
 
 services:
 # ################################## #
@@ -23,7 +23,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./traefik_data:/letsencrypt
+      - traefik_data:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
 # ################################## #
@@ -60,7 +60,11 @@ services:
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
 
     volumes:
-      - ./n8n_data:/home/node/.n8n
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  traefik_data:
+  n8n_data:
 
 # ################################## #
 # .env Contents
@@ -71,4 +75,3 @@ services:
 # PORT=5678
 # GENERIC_TIMEZONE=Atlantic/Madeira
 # ################################## #
-
