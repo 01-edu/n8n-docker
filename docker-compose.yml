@@ -19,9 +19,9 @@ services:
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
     volumes:
       - n8n_data:/home/node/.n8n
-      
-  volumes:
-    n8n_data:
+
+volumes:
+  n8n_data:
 
 # ################################## #
 # .env Contents
